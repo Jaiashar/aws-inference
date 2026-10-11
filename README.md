@@ -2,13 +2,13 @@
 
 **My engineering work on Amazon SageMaker and Amazon Bedrock, including foundation-model hosting and asynchronous inference.**
 
-At AWS, I built ML inference infrastructure and worked directly with enterprise customers to develop, train and optimize models using PyTorch and Hugging Face. The work connected model quality and training performance with the practical constraints of memory, compute utilization, inference cost and deployment.
+At AWS, I led architecture and implementation of SageMaker inference components across teams and built asynchronous model-hosting infrastructure for Bedrock. I also worked directly with enterprise customers to develop, train and optimize models using PyTorch and Hugging Face. The work connected model quality and training performance with the practical constraints of memory, compute utilization, inference cost and deployment.
 
 This repository documents that work through public product references. AWS implementation source is proprietary and is not included here.
 
 ## Amazon SageMaker: foundation-model hosting
 
-I worked on the inference capabilities described in the [SageMaker launch announcement](https://aws.amazon.com/blogs/aws/amazon-sagemaker-adds-new-inference-capabilities-to-help-reduce-foundation-model-deployment-costs-and-latency/).
+I led architecture and implementation of SageMaker inference components across teams, part of the capabilities described in the [SageMaker launch announcement](https://aws.amazon.com/blogs/aws/amazon-sagemaker-adds-new-inference-capabilities-to-help-reduce-foundation-model-deployment-costs-and-latency/).
 
 Serving a foundation model involves more than running a prediction. Each model needs compute and memory, request traffic changes over time, and unused capacity increases the cost of hosting. These capabilities let customers deploy multiple models on a shared endpoint while assigning resources and scaling policies to each model.
 
@@ -33,7 +33,7 @@ This summarizes the published product model rather than internal AWS service arc
 
 ## Amazon Bedrock: asynchronous invocation
 
-I also worked on asynchronous model hosting for long-running workloads, including the capability exposed through [Bedrock's StartAsyncInvoke API](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_StartAsyncInvoke.html).
+I built asynchronous model-hosting infrastructure for Bedrock, supporting long-running workloads through the capability exposed by [Bedrock's StartAsyncInvoke API](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_StartAsyncInvoke.html).
 
 Asynchronous invocation separates submitting a request from retrieving its eventual result. The API starts an invocation, accepts an output configuration, and returns an invocation ARN. That request lifecycle lets an application track work without holding a synchronous inference response open until completion.
 
@@ -76,6 +76,6 @@ My AWS work also included model development and optimization with enterprise cus
 | [SageMaker launch announcement](https://aws.amazon.com/blogs/aws/amazon-sagemaker-adds-new-inference-capabilities-to-help-reduce-foundation-model-deployment-costs-and-latency/) | Inference components, shared endpoints, resource allocation, scaling and the service-level results reported by AWS |
 | [Bedrock StartAsyncInvoke](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_StartAsyncInvoke.html) | The public asynchronous-invocation request and response contract |
 
-This is an engineering case study, not an AWS sample application or a repository of AWS source code. The product references document capabilities I contributed to; the work was delivered by AWS teams.
+This engineering case study describes my architecture and implementation work. The linked AWS references document the public product capabilities; the work was delivered with AWS teams. Proprietary implementation source is not included.
 
 [My portfolio](https://github.com/Jaiashar) · [PennOS systems implementation](https://github.com/Jaiashar/penn-os)
